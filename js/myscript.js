@@ -9,7 +9,13 @@ createApp({
         }
     },
     methods:{
-
+        toggleLineThrough(id){
+            const item = this.carbonara.find((el)=>el.id === id);
+            console.log(item);
+            if(item){
+                item.done = !item.done
+            }
+        }
     },
     mounted(){
         console.log(this.carbonara);
