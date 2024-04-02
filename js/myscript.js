@@ -15,6 +15,12 @@ createApp({
             if(item){
                 item.done = !item.done
             }
+        },
+        removeById(id){
+            const index = this.carbonara.findIndex((el)=>el.id === id);
+            if(index !== -1){
+                this.carbonara.splice(index, 1);
+            }
         }
     },
     mounted(){
