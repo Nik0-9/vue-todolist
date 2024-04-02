@@ -10,8 +10,16 @@
     <title>ToDo List</title>
 </head>
 <body>
-    <div id="app">
-        
+    <div id="app" class="mx-auto my-5">
+        <h1 class="text-center">Il segreto per una buona Carbonara</h1>
+        <div class="container ">
+            <ul>
+                <li v-for="(item,index) in carbonara" :key="item.id">
+                    {{item.text}}
+                </li>
+            </ul>
+        </div>
+
     </div>
     
 </body>

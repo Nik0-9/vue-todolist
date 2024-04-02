@@ -16,7 +16,7 @@ export const carbonara = [
     },
     {
         id: 4,
-        text: 'Prepariamo 1 tuorlo di uovo per ogni porzione + 1'.,
+        text: 'Prepariamo 1 tuorlo di uovo per ogni porzione + 1.',
         done: false
     },
     {
