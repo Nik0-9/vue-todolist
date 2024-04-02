@@ -6,6 +6,7 @@ createApp({
     data(){
         return{
             carbonara,
+            newAction: '',
         }
     },
     methods:{
@@ -21,8 +22,26 @@ createApp({
             if(index !== -1){
                 this.carbonara.splice(index, 1);
             }
+        },
+        addAction(){
+            const newObj = {
+                id: null,
+                text: this.newAction,
+                done: false
+            }
+            let newId = 0;
+            this.carbonara.forEach((el)=> {
+                if(newId < el.id){
+                    newId = el.id;
+                }
+            });
+            newObj.id = newId + 1;
+            this.carbonara.push(newObj);
+            this.newAction = '';
+            console.log(this.carbonara);
         }
     },
+    
     mounted(){
         console.log(this.carbonara);
     }
